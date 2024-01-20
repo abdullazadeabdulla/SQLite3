@@ -1,5 +1,3 @@
--- Here you can add any sql you want such as queries to create tables, insert data, etc.
--- The file will only be executed when you change anything in it and will run only once.
 PRAGMA foreign_keys = '1';
 PRAGMA database_list;
 SELECT type,name,sql,tbl_name FROM "main".sqlite_master;
@@ -99,3 +97,7 @@ PRAGMA temp_store;
 PRAGMA user_version;
 PRAGMA wal_autocheckpoint;
 SELECT 'x' NOT LIKE 'X';
+PRAGMA database_list;
+SELECT type,name,sql,tbl_name FROM "main".sqlite_master;
+SELECT "_rowid_",* FROM "main"."Users" LIMIT 0, 49999;
+SELECT COUNT(*) FROM "main"."Users"
